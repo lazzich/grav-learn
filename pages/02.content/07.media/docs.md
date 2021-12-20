@@ -40,6 +40,13 @@ Usually you'll use a media file within a page, so just put the file in the page 
 ![my image](image.jpg)
 [/prism]
 
+If you want to grab an image you have set in your Page Frontmatter in Twig, use the following request:
+{% verbatim %}
+```twig
+<img src="{{ page.media[my_image].url }}">
+```
+{% endverbatim %}
+
 If you want to put all your images in a single folder, you can put them in a `user/pages/images` folder. That way, in Twig, you can reach them via
 
 {% verbatim %}
